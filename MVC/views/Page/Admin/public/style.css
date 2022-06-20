@@ -1,0 +1,102 @@
+.dangtienhanh{
+color: rgb(8 122 70);
+}
+.danggiao{
+  color: rgb(104 104 70);
+}
+.danhan{
+  color: rgb(16 73 235);
+}
+.dahuy{
+  color: red;
+}
+
+.bold {
+  font-weight: bold;
+}
+.success {
+  color: rgb(17, 131, 17);
+}
+.thumbnailOD {
+  width: 80px;
+  border-radius: 4px;
+  height: auto;
+}
+.updateOrder {
+  display: flex;
+  flex-flow: column;
+  margin-left: auto;
+  align-items: end;
+}
+.form-status{
+  width: 200px;
+  text-align: left;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid green;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+li.nav-item {
+  padding: 0 10px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+a.card {
+  box-shadow: 2px 4px 20px 0px #d8d8d8;
+}
+a.card:hover {
+  text-decoration: none;
+  box-shadow: 2px 3px 25px 0px #dbdee0;
+}
+main {
+  background-color: #ecececa4;
+}
+p .fa-caret-down {
+  color: red;
+}
+li.nav-item {
+  padding: 0 10px;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+a.card {
+  box-shadow: 2px 4px 20px 0px #d8d8d8;
+}
+a.card:hover {
+  text-decoration: none;
+  box-shadow: 2px 3px 25px 0px #dbdee0;
+}
+main {
+  background-color: #ecececa4;
+}
+p .fa-caret-down {
+  color: red;
+}
+td.descriptonSp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  padding: 0.75rem 0.75rem 0;
+}
+
+/* CONTENt */
+.modal-content {
+  width: 200%;
+  left: -50%;
+}
+td.address_user_truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  padding-bottom: 0px;
+}

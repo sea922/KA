@@ -1,0 +1,304 @@
+:root {
+  --primary-color: #d3b673;
+  --secondary-color: #ff929b;
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+  --success-color: #49ad37;
+  --border-color: #d3b673;
+  --star-gold-color: #fffe3e;
+
+  --shadow-primary: 1px 0px 60px 0 rgb(12 18 34 / 11%), 2px 2px 90px 0 rgb(23 33 54 / 11%);
+
+  --header-height: 120px;
+  --navbar-height: 34px;
+  --header-with-search-height: calc(var(--header-height) - var(--nav-height));
+  --header-sort-bar-height: 46px;
+}
+
+.clear {
+  clear: both;
+}
+
+/* Font */
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli-LightItalic.woff2") format("woff2"),
+    url("../fonts/Muli-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli-SemiBold.woff2") format("woff2"),
+    url("../fonts/Muli-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli-ExtraLight.woff2") format("woff2"),
+    url("../fonts/Muli-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Muli-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli.woff2") format("woff2"), url("../fonts/Muli.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli-Bold.woff2") format("woff2"),
+    url("../fonts/Muli-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli-Light.woff2") format("woff2"),
+    url("../fonts/Muli-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli-Italic.woff2") format("woff2"),
+    url("../fonts/Muli-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli-ExtraLightItalic.woff2") format("woff2"),
+    url("../fonts/Muli-ExtraLightItalic.woff") format("woff");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli-Semi-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Muli-Semi-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+/* Font */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes growth {
+  from {
+    transform: scale(var(--growth-from));
+  }
+  to {
+    transform: scale(var(--growth-to));
+  }
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  animation: fadeIN linear 0.1s;
+}
+
+.modal__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+  --growth-from: 0.7;
+  --growth-to: 1;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+  animation: growth linear 0.1;
+}
+
+/* Border style */
+.btn {
+  text-decoration: none;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.5rem;
+  padding: 8px 16px;
+  outline: none;
+  cursor: pointer;
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6rem;
+}
+
+.btn.btn--nomal:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--size-s {
+  height: 32px;
+  font-size: 12px;
+  padding: 0 8px;
+}
+
+.btn.btn--primary {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.btn.btn--success {
+  color: var(--white-color);
+  background-color: var(--success-color);
+}
+
+.btn .btn--disable {
+  color: #949494;
+  background-color: #c3c3c3;
+  cursor: default;
+}
+
+/* Selection */
+.select-input {
+  position: relative;
+  min-width: 200px;
+  height: 34px;
+  border-radius: 2px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white-color);
+}
+
+.select-input__label {
+  font-size: 1.4rem;
+}
+
+.select-input__icon {
+  font-size: 1.4rem;
+  position: relative;
+  color: rgb(131, 131, 131);
+  top: 1px;
+}
+
+.select-input:hover .select-input__list {
+  display: block;
+}
+
+.select-input__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  padding: 8px 16px;
+  list-style: none;
+  display: none;
+  z-index: 1;
+}
+
+.select-input__link {
+  font-size: 1.4rem;
+  color: var(--text-color);
+  text-decoration: none;
+  display: block;
+  padding: 4px 0;
+}
+
+.select-input__link:hover {
+  color: var(--primary-color);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.pagination-item {
+  margin: 0 12px;
+}
+
+.pagination-item--active .pagination-item__link {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+  background-color: #ee5c3e;
+}
+
+.pagination-item__link {
+  --height: 30px;
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #939393;
+  min-width: 40px;
+  height: var(--height);
+  line-height: var(--height);
+  text-align: center;
+  border-radius: 2px;
+}
+
+.pagination-item__icon {
+}

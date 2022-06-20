@@ -1,0 +1,133 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+  .hide-on-tablet-mobile {
+    display: none;
+  }
+  .cart {
+    margin-right: 20px;
+  }
+  .cart-nav-tablet-mobile__icon {
+    margin: 0;
+  }
+
+  .nav-tablet-mobile {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: end;
+    background-color: #ffff;
+    padding: 20px;
+    width: 70px;
+    height: 66px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: width 0.6s linear;
+    overflow-x: hidden;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    margin-right: 20px;
+    top: 2px;
+  }
+
+  .nav-tablet-mobile.active {
+    width: 250px;
+    height: 280px;
+  }
+
+  .nav-tablet-mobile ul {
+    display: flex;
+    flex-direction: column;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    transition: width 0.6s linear;
+    overflow: hidden;
+  }
+
+  .nav-tablet-mobile.active ul {
+    width: 100%;
+  }
+
+  .nav-tablet-mobile ul li {
+    /* height: 0; */
+    opacity: 0;
+    transform: rotateY(0deg);
+    transition: transform 0.6s linear, opacity 0.6s linear;
+  }
+  .nav-tablet-mobile ul li:focus {
+    background-color: var(--primary-color);
+  }
+  .nav-tablet-mobile.active ul li {
+    opacity: 1;
+    margin: 10px;
+    height: auto;
+    transform: rotateY(360deg);
+  }
+
+  .nav-tablet-mobile ul a {
+    position: relative;
+    font-size: 1.6rem;
+    color: var(--text-color) !important;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .nav-tablet-mobile__icon {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    background-color: #ffff;
+  }
+
+  .nav-tablet-mobile__icon:focus {
+    outline: 0;
+  }
+
+  .nav-tablet-mobile__icon .line {
+    position: absolute;
+    background-color: #0e63f5;
+    width: 20px;
+    height: 2px;
+    top: 16px;
+    left: 5px;
+    transition: transform 0.6s linear;
+  }
+
+  .nav-tablet-mobile__icon .line2 {
+    top: auto;
+    bottom: 0px;
+  }
+  .nav-tablet-mobile.active .nav-tablet-mobile__icon .line1 {
+    top: 9px;
+    transform: rotate(-765deg) translateY(5.5px);
+  }
+
+  .nav-tablet-mobile.active .nav-tablet-mobile__icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
+    bottom: 12px;
+  }
+
+  .menu-list2 {
+    position: absolute;
+    right: 20px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .hide-on-tablet {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
