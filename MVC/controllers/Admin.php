@@ -22,6 +22,7 @@ class Admin extends Controller
       "countUser" => $User->countUser(),
       "countOrder" => $Models->countOrder(),
       "countComment" => $Models->countComment(),
+      "sumRevenue" => $Models->sumRevenue(),
       "thongkeChartName" => $Admin->ThongKe(),
       "thongkeChartNum" => $Admin->ThongKe(),
       "ThongKe" => $Admin->ThongKe(),

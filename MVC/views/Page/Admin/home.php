@@ -100,6 +100,24 @@
           </div>
         </a>
       </div>
+      <div class="col col-4 pb-4">
+        <a href="<?= BASE_URL ?>/Admin/comment" class="card border-0 rounded">
+          <div class="card-body text-center">
+            <h6 class="card-title text-uppercase">Doanh thu</h6>
+            <h1 class="card-text text-dark">
+              <?php
+              if (isset($data['sumRevenue'])) {
+                $row = mysqli_fetch_assoc($data['sumRevenue']);
+                echo number_format($row['sum(price_total)']);
+              }
+              ?>
+            </h1>
+            <p class="text-danger">
+              <i class="fas"></i>
+            </p>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
   <section class="pt-5">
